@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 5em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 20em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5em 1.25em;
+  background: var(--clr-accent, #06066d);
+  color: var(--clr-text, white);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  border-radius: .25em;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #033746;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background-image: url(../img/shoe-3.png), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__items {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: transfrom 250ms ease-in-out;
+  transition: transfrom 250ms ease-in-out;
+  text-decoration: none;
+  color: #3b3a3a;
+  text-align: center;
+}
+
+.featured__items span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.featured__items:hover, .featured__items:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.featured__items:hover .featured__details, .featured__items:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 2em white;
+}
+
+.featured__items::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  padding: 75% 75% 0 0;
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+
+.featured__details {
+  opacity: 0;
+  -webkit-transition: opacity  250ms;
+  transition: opacity  250ms;
+}
+
+.product {
+  background-image: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+  padding: 3em;
+  border-radius: 3em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.product__title {
+  font-size: 4em;
+  display: block;
+  text-transform: capitalize;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 1.2;
+  color: white;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+  margin: -5em 0 0 0;
+}
+
+@media (min-width: 45em) {
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/shoe-4.png);
+    shape-margin: 3.5em;
+  }
+}
+
+.product__discription {
+  color: white;
+  display: block;
+  margin: auto;
+  text-align: left;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.red-shoe {
+  background-image: -webkit-gradient(linear, left top, right top, from(#eb3349), to(#f45c43));
+  background-image: linear-gradient(to right, #eb3349, #f45c43);
+  --clr-accent: orange;
+}
+
+.darkblue-shoe {
+  background-image: -webkit-gradient(linear, left top, right top, from(#000428), to(#004e92));
+  background-image: linear-gradient(to right, #000428, #004e92);
+  --clr-accent: orange;
+}
+
+.lightblue-shoe {
+  --clr-accent: orange;
+}
+/*# sourceMappingURL=main.css.map */
